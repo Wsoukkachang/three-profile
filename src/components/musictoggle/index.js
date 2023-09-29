@@ -33,7 +33,7 @@ const Musictoggle = () => {
       <Sound
         url={Summon}
         playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.PAUSED}
-        volume={75}
+        volume={50}
         loop={true}
         autoLoad={true}
       />
