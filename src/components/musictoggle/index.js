@@ -35,6 +35,7 @@ const Musictoggle = () => {
         playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.PAUSED}
         volume={75}
         loop={true}
+        autoLoad={true}
       />
     </>
   );

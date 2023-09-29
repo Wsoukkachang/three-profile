@@ -102,7 +102,7 @@ const services = [
   {
     title: "Protocol Design",
     description:
-      "I have helped create and design protocols from scratch, while always keeping scaling a priority. 🗄️ One of the protocols even got us into the NVDIA Inception Program!",
+      "I have helped create and design protocols from scratch, while always keeping scaling a priority. 🗄️ One of the protocols even got us into the NVIDIA Inception Program!",
   },
 ];
 
