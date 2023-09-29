@@ -5,7 +5,7 @@ import Summon from "./Summon.mp3";
 
 const Musictoggle = () => {
   const [music, setmusic] = useState(localStorage.getItem("music"));
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     // document.documentElement.setAttribute("data-music", music);
