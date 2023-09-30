@@ -114,49 +114,50 @@ const dataportfolio = [
     tech: "React JS / Chakra UI / Three.JS / Ethers.js / web3.js / WAGMI / WalletConnect / Moralis / Solidity / MongoDB / AWS",
     link: "https://www.kondux.io/",
   },
-  {
-    img: "https://i.ibb.co/RhbDM3p/DNA.png",
-    description:
-      "Web browser viewport app using Three.js (React) to look and interact with 3D assets in a web3 environment. (Private Repo)",
-    tech: "React JS / Chakra UI / Three.JS / Ethers.js / web3.js / Moralis / Solidity / MongoDB / AWS ",
-    link: "https://www.kondux.io/viewport",
-  },
+
   {
     img: "https://i.ibb.co/W5PcHgv/Screenshot-2023-09-28-054849.png",
     description: "Web browser NFT Minting app. (Private Repo)",
     tech: "React JS / Chakra UI / Ethers.js / web3.js / Moralis / Solidity / MongoDB ",
     link: "https://www.kondux.io/knft_mint",
   },
+
   {
-    img: "https://i.ibb.co/DWTB0y5/Staking-Thumb.png",
-    description: "Web browser Crypto Staking app. (Private Repo)",
-    tech: "React JS / Chakra UI / Ethers.js / web3.js / Moralis / Solidity / MongoDB ",
-    link: "https://www.kondux.io/rewards",
-  },
-  {
-    img: "https://i.ibb.co/5LfNMwn/JSON-CREATION.png",
+    img: "https://i.ibb.co/sbZwhdX/thumb-10.jpg",
     description:
-      "NVIDIA OMNIVERSE Kondux Web3 Extension that enables Omniverse to communicate with the Ethereum Blockchain using Universal Scene Description file format. (Private Repo)",
-    tech: "React JS / Moralis/ Solidity / HTML / CSS / Python / MongoDB / Unreal / Unity",
-    link: "https://kondux.info/",
+      "Ancient Shapes - Construct barriers and create weapons to save yourself from alien forces.",
+    tech: "Javascript / Construct 2",
+    link: "https://www.newgrounds.com/portal/view/640245",
   },
+
   {
     img: "https://i.ibb.co/X5mNvQb/kr.png",
     description: "Kratos: A Work of Power",
     tech: "React JS / HTML/ CSS/",
     link: "https://kratoselect.com/",
   },
+
   {
     img: "https://i.ibb.co/VQvnqnq/rpt.png",
     description: "Real Power Technologies",
     tech: "React JS / HTML/ CSS",
     link: "https://realpowertechnologies.com/",
   },
+
   {
-    img: "https://i.ibb.co/WyFy9XR/thumb-1.png",
-    description: "Texas Drone Imaging",
-    tech: "React JS / SCSS/ Material UI/ Flexbox / Windy API/ Firebase",
-    link: "https://texasdroneimaging.net/",
+    img: "https://i.ibb.co/qWK1W8Q/thumb-5.jpg",
+    description:
+      "Sonic The Lambdog - A game app where players can traverse a 100+ room maze and interact with other players in real time.",
+    tech: "React JS / Google Api / Unsplash Api/ YouTube Api/ Firebase",
+    link: "https://zealous-poincare-b92bd3.netlify.app/",
+  },
+
+  {
+    img: "https://i.ibb.co/RhbDM3p/DNA.png",
+    description:
+      "Web browser viewport app using Three.js (React) to look and interact with 3D assets in a web3 environment. (Private Repo)",
+    tech: "React JS / Chakra UI / Three.JS / Ethers.js / web3.js / Moralis / Solidity / MongoDB / AWS ",
+    link: "https://www.kondux.io/viewport",
   },
   {
     img: "https://i.ibb.co/vJXBLXX/su.png",
@@ -166,12 +167,21 @@ const dataportfolio = [
   },
 
   {
-    img: "https://i.ibb.co/Wp1WShV/thumb-2.jpg",
+    img: "https://i.ibb.co/K231rYN/thumb-9.jpg",
     description:
-      "Seen-tence - A visual learning tool to help people understand what they are reading faster. - You can actually hear and see your sentences!",
-    tech: "React JS / Google Api / Unsplash Api / YouTube Api / Firebase",
-    link: "https://seentence2.web.app/",
+      "The Greys - Play as The Greys and save as many humans as you can.",
+    tech: "Javascript / Construct 2",
+    link: "https://www.newgrounds.com/portal/view/640824",
   },
+
+  {
+    img: "https://i.ibb.co/5LfNMwn/JSON-CREATION.png",
+    description:
+      "NVIDIA OMNIVERSE Kondux Web3 Extension that enables Omniverse to communicate with the Ethereum Blockchain using Universal Scene Description file format. (Private Repo)",
+    tech: "React JS / Moralis/ Solidity / HTML / CSS / Python / MongoDB / Unreal / Unity",
+    link: "https://kondux.info/",
+  },
+
   {
     img: "https://i.ibb.co/N1Y5jN5/thumb-3.png",
     description:
@@ -187,44 +197,46 @@ const dataportfolio = [
     link: "https://speakincog.com/landing",
   },
   {
-    img: "https://i.ibb.co/qWK1W8Q/thumb-5.jpg",
-    description:
-      "Sonic The Lambdog - A game app where players can traverse a 100+ room maze and interact with other players in real time.",
-    tech: "React JS / Google Api / Unsplash Api/ YouTube Api/ Firebase",
-    link: "https://zealous-poincare-b92bd3.netlify.app/login",
+    img: "https://i.ibb.co/DWTB0y5/Staking-Thumb.png",
+    description: "Web browser Crypto Staking app. (Private Repo)",
+    tech: "React JS / Chakra UI / Ethers.js / web3.js / Moralis / Solidity / MongoDB ",
+    link: "https://www.kondux.io/rewards",
   },
+
   {
-    img: "https://i.ibb.co/6BTWrGX/thumb-6.jpg",
-    description: "Droom - Think Tinder + LinkedIn.",
-    tech: "React JS / Google Api / Unsplash Api/ YouTube Api/ Firebase",
-    link: "https://dreamindroom.netlify.app/",
-  },
-  {
-    img: "https://i.ibb.co/g6ZnFXz/thumb-7.jpg",
+    img: "https://i.ibb.co/Wp1WShV/thumb-2.jpg",
     description:
-      "Super Six Card Game - A strategic multiplayer card game. (Private Repo)",
-    tech: "Javascript / Construct 2 / Websocket",
-    link: "#",
+      "Seen-tence - A visual learning tool to help people understand what they are reading faster. - You can actually hear and see your sentences!",
+    tech: "React JS / Google Api / Unsplash Api / YouTube Api / Firebase",
+    link: "https://seentence2.web.app/",
   },
+
   {
     img: "https://i.ibb.co/VpMdNXq/thumb-8.jpg",
     description: "Space Jumper - Simple, yet addicting game.",
     tech: "Javascript / Construct 2",
     link: "https://www.newgrounds.com/portal/view/641062",
   },
+
   {
-    img: "https://i.ibb.co/K231rYN/thumb-9.jpg",
+    img: "https://i.ibb.co/WyFy9XR/thumb-1.png",
+    description: "Texas Drone Imaging",
+    tech: "React JS / SCSS/ Material UI/ Flexbox / Windy API/ Firebase",
+    link: "NONE",
+  },
+
+  {
+    img: "https://i.ibb.co/g6ZnFXz/thumb-7.jpg",
     description:
-      "The Greys - Play as The Greys and save as many humans as you can.",
-    tech: "Javascript / Construct 2",
-    link: "https://www.newgrounds.com/portal/view/640824",
+      "Super Six Card Game - A strategic multiplayer card game. (Private Repo)",
+    tech: "Javascript / Construct 2 / Websocket",
+    link: "NONE",
   },
   {
-    img: "https://i.ibb.co/sbZwhdX/thumb-10.jpg",
-    description:
-      "Ancient Shapes - Construct barriers and create weapons to save yourself from alien forces.",
-    tech: "Javascript / Construct 2",
-    link: "https://www.newgrounds.com/portal/view/640245",
+    img: "https://i.ibb.co/6BTWrGX/thumb-6.jpg",
+    description: "Droom - Think Tinder + LinkedIn.",
+    tech: "React JS / Google Api / Unsplash Api/ YouTube Api/ Firebase",
+    link: "https://dreamindroom.netlify.app/",
   },
 ];
 

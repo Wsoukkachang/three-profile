@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-import { VscGrabber, VscClose } from "react-icons/vsc";
+import { VscGrabber, VscClose, VscMenu } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext2, logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
@@ -24,8 +24,16 @@ const Headermain = () => {
           <div className="d-flex align-items-center">
             <Musictoggle />
             <Themetoggle />
-            <button className="menu__button  nav_ac" onClick={handleToggle}>
-              {!isActive ? <VscClose /> : <VscGrabber />}
+            <button
+              className="menu__button nav_ac"
+              onClick={handleToggle}
+              style={{ display: "flex", justifyContent: "flex-start" }}
+            >
+              {!isActive ? (
+                <VscClose style={{ height: "30px", width: "30px" }} />
+              ) : (
+                <VscMenu style={{ height: "30px", width: "30px" }} />
+              )}
             </button>
           </div>
         </div>

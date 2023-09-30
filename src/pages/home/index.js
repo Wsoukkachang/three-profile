@@ -482,28 +482,53 @@ export const Home = () => {
 
                 <div className="about_content">
                   <div className="about_cards">
-                    <article className="about_card">
-                      <FaAward className="about_icon" />
-                      <h5>Experience</h5>
-                      <small>5+ Years Experience</small>
-                    </article>
+                    <Link to="/about">
+                      <article className="about_card">
+                        <FaAward className="about_icon" />
+                        <h5>Experience</h5>
+                        <small>5+ Years Experience</small>
+                      </article>
+                    </Link>
 
+                    {/* 
                     <article className="about_card">
                       <FiUsers className="about_icon" />
                       <h5>Clients</h5>
                       <small>20+ Clients</small>
-                    </article>
+                    </article> */}
 
-                    <article className="about_card">
-                      <VscFolderLibrary className="about_icon" />
-                      <h5>Projects</h5>
-                      <small>10+ Projects</small>
-                    </article>
+                    <Link to="videos">
+                      <article className="about_card">
+                        <VscFolderLibrary className="about_icon" />
+
+                        <h5>Projects</h5>
+                        <small>10+ Projects</small>
+                      </article>
+                    </Link>
+
+                    <div className="intro_btn-action pb-5">
+                      <Link to="/portfolio" className="text_2">
+                        <div id="button_p" className="ac_btn btn ">
+                          My Portfolio
+                          <div className="ring one"></div>
+                          <div className="ring two"></div>
+                          <div className="ring three"></div>
+                        </div>
+                      </Link>
+                      <Spacer p={4} />
+                      <Link to="/contact">
+                        <div id="button_h" className="ac_btn btn">
+                          Contact
+                          <div className="ring one"></div>
+                          <div className="ring two"></div>
+                          <div className="ring three"></div>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
-                <Spacer p={4} />
-                <h2 className="mb-1x">"{introdata.quote}"</h2>
+                <h2 className="mb-1x quote">"{introdata.quote}"</h2>
 
                 <Spacer p={2} />
 
@@ -544,25 +569,6 @@ export const Home = () => {
                 <Spacer p={3} />
 
                 <p className="mb-1x">{introdata.description2}</p>
-
-                <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn ">
-                      My Portfolio
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                  <Link to="/contact">
-                    <div id="button_h" className="ac_btn btn">
-                      Contact
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

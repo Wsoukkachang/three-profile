@@ -78,3 +78,16 @@
 .po_item .content a:hover {
     text-decoration: none;
 }
+
+.youtube-video {
+    aspect-ratio: 16 / 9;
+    min-width: 50vw !important;
+  }
+
+  @media (max-width:991.98px) {
+    .youtube-video {
+        aspect-ratio: 16 / 9;
+        min-width: 80vw !important;
+      }
+    
+}

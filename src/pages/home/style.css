@@ -7,6 +7,10 @@ section {
     transition: all .5s ease-in;
 }
 
+/* .quote {
+    font-size: ;
+} */
+
 .who_am_I {
     font-family: Cinzel;
 }
@@ -83,7 +87,7 @@ section {
 
 .intro_sec .text h1 {
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     font-weight: 700;
 }
 
@@ -273,7 +277,7 @@ section {
     background: transparent;
     border: 1px solid var(--text-color);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     transition: var(--transition);
   }

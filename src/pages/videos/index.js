@@ -27,9 +27,9 @@ export const Videos = () => {
           gap={4}
         >
           <Box
+            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
             as="iframe"
-            width="560px"
-            height="315px"
+            class="youtube-video"
             src={
               "https://www.youtube.com/embed/8nQg5_Ez2OY?si=bVZrU4T-PCIh05p1"
             }
@@ -42,9 +42,9 @@ export const Videos = () => {
           />
 
           <Box
+            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
             as="iframe"
-            width="560px"
-            height="315px"
+            class="youtube-video"
             src={
               "https://www.youtube.com/embed/9Rd5nfxKuh8?si=kgn_mfnovAlnONnW"
             }
@@ -57,9 +57,9 @@ export const Videos = () => {
           />
 
           <Box
+            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
             as="iframe"
-            width="560px"
-            height="315px"
+            class="youtube-video"
             src={
               "https://www.youtube.com/embed/aGT5J5f-4WI?si=k2ruVkV_XrBs6Xjw"
             }
@@ -72,9 +72,9 @@ export const Videos = () => {
           />
 
           <Box
+            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
             as="iframe"
-            width="560px"
-            height="315px"
+            class="youtube-video"
             src={
               "https://www.youtube.com/embed/c51sk7V8Orc?si=W8jNkf2jLpC4RaOl"
             }

@@ -30,10 +30,19 @@ export const Portfolio = () => {
                   <p>
                     <small>{data.tech}</small>
                   </p>
-
-                  <a target="_blank" href={data.link}>
-                    View Project
-                  </a>
+                  {data.link === "NONE" ? (
+                    <>
+                      <p>
+                        <small>App is no longer hosted.</small>
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <a target="_blank" href={data.link}>
+                        View Project
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             );
