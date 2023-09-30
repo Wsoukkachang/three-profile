@@ -1,4 +1,4 @@
-const logotext = "WILLIAM SOUKKACHANG";
+const logotext = "WILLIAM";
 
 const logotext2 = "William Soukkachang";
 

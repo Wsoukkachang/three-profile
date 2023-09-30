@@ -35,7 +35,7 @@
 
 .stick_follow_icon ul li {
     display: block;
-    font-size: 12px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
     transition: all .3s;
@@ -76,7 +76,9 @@
         margin-right: 65px;
     }
     .stick_follow_icon ul {
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
     }
     .stick_follow_icon ul li {
         display: inline;

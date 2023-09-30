@@ -14,7 +14,7 @@ import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { Stars, Sky } from "@react-three/drei";
+import { Stars, Sky, Text3D } from "@react-three/drei";
 import { Canvas, extend, useLoader, useFrame } from "@react-three/fiber";
 import {
   Image,
@@ -29,6 +29,9 @@ import * as THREE from "three";
 import glsl from "babel-plugin-glsl/macro";
 import NvidiaWhite from "./LogoWhite.svg";
 import NvidiaBlack from "./LogoBlack.svg";
+import Nvidia from "./nvidia.png";
+import fontUrl from "./Tomatoes_Regular.json";
+
 import {
   Environment,
   Lightformer,
@@ -36,6 +39,7 @@ import {
   MeshTransmissionMaterial,
   useGLTF,
   Loader,
+  Center as DCenter,
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -312,8 +316,13 @@ export const Home = () => {
                 <ambientLight intensity={0.5} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                 <pointLight position={[-10, -10, -10]} />
-                <Model position={[0, 0, 0]} scale={1.5} />
-                <Fire scale={7} />
+                <Model position={[0, -0.2, 0]} scale={1.5} />
+
+                <Text3D font={fontUrl} scale={0.5} position={[-1.5, 1.6, 0]}>
+                  Inspire
+                </Text3D>
+
+                <Fire scale={7} position={[0, -0.3, 0]} />
                 {/* {isPlaying === true ? (
                     <Track
                       castShadow
@@ -397,37 +406,75 @@ export const Home = () => {
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center">
               <div className="intro mx-auto">
-                <Box p={2}>
-                  <Center>
-                    <div className="about_me">
-                      <Box>
-                        <Tooltip
-                          fontSize="xl"
-                          bg="gray.300"
-                          label="Think outside the b0x."
-                          // isOpen={isOpen}
-                          hasArrow
-                          arrowSize={15}
-                          placement="right"
-                          closeDelay={1000}
-                          shouldWrapChildren={true}
-                        >
-                          <div className="about_me-image">
-                            <Image
-                              src={ME}
-                              alt="About image"
-                              onMouseEnter={() => handleHover}
-                              onMouseLeave={() => setIsOpen(false)}
-                              style={{
-                                transform: "rotate(-7deg)",
-                              }}
-                            />
-                          </div>
-                        </Tooltip>
-                      </Box>
-                    </div>
-                  </Center>
-                </Box>
+                {window.innerWidth < 991.98 ? (
+                  <>
+                    <Box p={2}>
+                      <Center>
+                        <div className="about_me">
+                          <Box>
+                            <Tooltip
+                              fontSize="xl"
+                              bg="gray.300"
+                              label="Think outside the b0x."
+                              // isOpen={isOpen}
+                              hasArrow
+                              arrowSize={15}
+                              placement="bottom"
+                              closeDelay={1000}
+                              shouldWrapChildren={true}
+                            >
+                              <div className="about_me-image">
+                                <Image
+                                  src={ME}
+                                  alt="About image"
+                                  onMouseEnter={() => handleHover}
+                                  onMouseLeave={() => setIsOpen(false)}
+                                  style={{
+                                    transform: "rotate(-7deg)",
+                                  }}
+                                />
+                              </div>
+                            </Tooltip>
+                          </Box>
+                        </div>
+                      </Center>
+                    </Box>
+                  </>
+                ) : (
+                  <>
+                    <Box p={2}>
+                      <Center>
+                        <div className="about_me">
+                          <Box>
+                            <Tooltip
+                              fontSize="xl"
+                              bg="gray.300"
+                              label="Think outside the b0x."
+                              // isOpen={isOpen}
+                              hasArrow
+                              arrowSize={15}
+                              placement="right"
+                              closeDelay={1000}
+                              shouldWrapChildren={true}
+                            >
+                              <div className="about_me-image">
+                                <Image
+                                  src={ME}
+                                  alt="About image"
+                                  onMouseEnter={() => handleHover}
+                                  onMouseLeave={() => setIsOpen(false)}
+                                  style={{
+                                    transform: "rotate(-7deg)",
+                                  }}
+                                />
+                              </div>
+                            </Tooltip>
+                          </Box>
+                        </div>
+                      </Center>
+                    </Box>
+                  </>
+                )}
 
                 <Spacer p={2} />
                 <h2 className="mb-1x">{introdata.title} 🤝</h2>
@@ -481,40 +528,18 @@ export const Home = () => {
 
                 <p className="mb-1x">{introdata.description}</p>
 
-                <Spacer p={2} />
+                <Spacer p={1} />
 
-                {colorMode === "dark" ? (
-                  <>
-                    {" "}
-                    <Box>
-                      <Image
-                        className="logo-Nvidia"
-                        minWidth="420px"
-                        minHeight="70px"
-                        // boxSize="150px"
-                        // objectFit="cover"
-                        zIndex="5"
-                        src={`${NvidiaWhite}`}
-                        m={2}
-                      />
-                    </Box>
-                  </>
-                ) : (
-                  <>
-                    <Box>
-                      <Image
-                        className="logo-Nvidia"
-                        minWidth="420px"
-                        minHeight="70px"
-                        // boxSize="150px"
-                        // objectFit="cover"
-                        zIndex="5"
-                        src={`${NvidiaBlack}`}
-                        m={2}
-                      />
-                    </Box>
-                  </>
-                )}
+                <Image
+                  className="logo-Nvidia"
+                  maxWidth="210px"
+                  // minHeight="70px"
+                  // boxSize="150px"
+                  // objectFit="cover"
+                  zIndex="5"
+                  src={`${Nvidia}`}
+                  // m={2}
+                />
 
                 <Spacer p={3} />
 
@@ -531,7 +556,7 @@ export const Home = () => {
                   </Link>
                   <Link to="/contact">
                     <div id="button_h" className="ac_btn btn">
-                      Contact Me
+                      Contact
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
