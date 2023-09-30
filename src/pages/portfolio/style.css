@@ -48,7 +48,7 @@
 .po_item .content {
     opacity: 0;
     transition-delay: 1s;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
     font-size: 20px;
 }
 
@@ -73,8 +73,4 @@
     padding: 4px 8px;
     text-align: center;
     font-size: 1rem;
-}
-
-.po_item .content a:hover {
-    text-decoration: none;
 }

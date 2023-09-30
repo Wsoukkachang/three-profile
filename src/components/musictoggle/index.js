@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { CiPlay1, CiPause1 } from "react-icons/ci";
 import Sound from "react-sound";
 import Summon from "./Summon.mp3";
+import { Spinner } from "@chakra-ui/react";
 
 const Musictoggle = () => {
   const [music, setmusic] = useState(localStorage.getItem("music"));
@@ -30,13 +31,13 @@ const Musictoggle = () => {
           </>
         )}
       </div>
-      <Sound
-        url={Summon}
-        playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.PAUSED}
-        volume={25}
-        loop={true}
-        autoLoad={true}
-      />
+      <Suspense fallback={<Spinner />}>
+        <Sound
+          url={Summon}
+          playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.PAUSED}
+          volume={25}
+        />
+      </Suspense>
     </>
   );
 };

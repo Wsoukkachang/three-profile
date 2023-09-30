@@ -45,20 +45,14 @@ export const About = () => {
               <tbody className="color_sec_bg">
                 {worktimeline.map((data, i) => {
                   return (
-                    <>
-                      <tr className="color_sec_bg" key={i}>
-                        <th className="color_sec_bg" scope="row">
-                          {data.jobtitle}
-                        </th>
-                        <td className="color_sec_bg">{data.where}</td>
-                        <td className="color_sec_bg">{data.duties}</td>
-                        <td className="color_sec_bg">{data.date}</td>
-                      </tr>
-
-                      {/* <tr className="color_sec_bg" width="100%">
-                        {data.detail}
-                      </tr> */}
-                    </>
+                    <tr className="color_sec_bg" key={i}>
+                      <th className="color_sec_bg" scope="row">
+                        {data.jobtitle}
+                      </th>
+                      <td className="color_sec_bg">{data.where}</td>
+                      {/* <td className="color_sec_bg">{data.duties}</td> */}
+                      <td className="color_sec_bg">{data.date}</td>
+                    </tr>
                   );
                 })}
               </tbody>

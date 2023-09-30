@@ -293,11 +293,18 @@ export const Home = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
-          <div className="h_bg-image order-1 order-lg-2 h-100 ">
+          <div className="h_bg-image order-1 order-lg-2 ">
             <Suspense fallback={<Loader />}>
               <Canvas
                 ref={canvasRef}
-                gl={{ logarithmicDepthBuffer: true, antialias: false }}
+                gl={{
+                  preserveDrawingBuffer: true,
+                  logarithmicDepthBuffer: true,
+                  antialias: false,
+                  alpha: true,
+                  failIfMajorPerformanceCaveat: true,
+                  powerPreference: "high-performance",
+                }}
                 dpr={[1, 1.5]}
                 camera={{ position: [0, -0.5, 7], fov: 40 }}
               >
@@ -305,10 +312,9 @@ export const Home = () => {
                 <ambientLight intensity={0.5} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                 <pointLight position={[-10, -10, -10]} />
-                <Suspense fallback={null}>
-                  <Model position={[0, 0, 0]} scale={1.5} />
-                  <Fire scale={7} />
-                  {/* {isPlaying === true ? (
+                <Model position={[0, 0, 0]} scale={1.5} />
+                <Fire scale={7} />
+                {/* {isPlaying === true ? (
                     <Track
                       castShadow
                       scale={10}
@@ -318,7 +324,6 @@ export const Home = () => {
                       url={Summon}
                     />
                   ) : null} */}
-                </Suspense>
                 {colorMode === "dark" ? (
                   <>
                     {/* <Environment

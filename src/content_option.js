@@ -108,59 +108,59 @@ const services = [
 
 const dataportfolio = [
   {
-    img: "https://img.api.cryptorank.io/coins/kondux1646294189605.png",
-    description: "Kondux. Created Web3 dApp. (Private Repo)",
+    img: "https://kondux.info/wp-content/uploads/2022/11/hodlers-screen-web-kondux-logo.jpg",
+    description:
+      "Web3 app that features NFT minting, crypto staking, and an innovative viewport that helps you interact with NFTs like never before. (Private Repo)",
     tech: "React JS / Chakra UI / Three.JS / Ethers.js / web3.js / WAGMI / WalletConnect / Moralis / Solidity / MongoDB / AWS",
     link: "https://www.kondux.io/",
   },
   {
     img: "https://i.ibb.co/RhbDM3p/DNA.png",
     description:
-      "Kondux - Created web browser viewport using Three.js (React) to look and interact with 3D assets in a web3 environment. (Private Repo)",
+      "Web browser viewport app using Three.js (React) to look and interact with 3D assets in a web3 environment. (Private Repo)",
     tech: "React JS / Chakra UI / Three.JS / Ethers.js / web3.js / Moralis / Solidity / MongoDB / AWS ",
     link: "https://www.kondux.io/viewport",
   },
   {
     img: "https://i.ibb.co/W5PcHgv/Screenshot-2023-09-28-054849.png",
-    description:
-      "Kondux - Created and connected all NFT mint pages (Private Repo)",
+    description: "Web browser NFT Minting app. (Private Repo)",
     tech: "React JS / Chakra UI / Ethers.js / web3.js / Moralis / Solidity / MongoDB ",
     link: "https://www.kondux.io/knft_mint",
   },
   {
     img: "https://i.ibb.co/DWTB0y5/Staking-Thumb.png",
-    description:
-      "Kondux - Created and connected crypto Staking Rewards Dashboard (Private Repo)",
+    description: "Web browser Crypto Staking app. (Private Repo)",
     tech: "React JS / Chakra UI / Ethers.js / web3.js / Moralis / Solidity / MongoDB ",
     link: "https://www.kondux.io/rewards",
   },
   {
     img: "https://i.ibb.co/5LfNMwn/JSON-CREATION.png",
-    description: "Kondux - NVIDIA Omniverse Web3 Extenstion (Private Repo)",
+    description:
+      "NVIDIA OMNIVERSE Kondux Web3 Extension that enables Omniverse to communicate with the Ethereum Blockchain using Universal Scene Description file format. (Private Repo)",
     tech: "React JS / Moralis/ Solidity / HTML / CSS / Python / MongoDB / Unreal / Unity",
     link: "https://kondux.info/",
   },
   {
     img: "https://i.ibb.co/X5mNvQb/kr.png",
-    description: "Kratos: A Work of Power website",
+    description: "Kratos: A Work of Power",
     tech: "React JS / HTML/ CSS/",
     link: "https://kratoselect.com/",
   },
   {
     img: "https://i.ibb.co/VQvnqnq/rpt.png",
-    description: "Real Power Technologies Website",
+    description: "Real Power Technologies",
     tech: "React JS / HTML/ CSS",
     link: "https://realpowertechnologies.com/",
   },
   {
     img: "https://i.ibb.co/WyFy9XR/thumb-1.png",
-    description: "Texas Drone Imaging Website",
+    description: "Texas Drone Imaging",
     tech: "React JS / SCSS/ Material UI/ Flexbox / Windy API/ Firebase",
     link: "https://texasdroneimaging.net/",
   },
   {
     img: "https://i.ibb.co/vJXBLXX/su.png",
-    description: "Superchange Website",
+    description: "Superchange",
     tech: "React JS / HTML / CSS / Canvas",
     link: "https://portfolio-will.vercel.app/",
   },
