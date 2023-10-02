@@ -53,7 +53,6 @@ import {
   DepthOfField,
   Noise,
   Vignette,
-  Outline,
 } from "@react-three/postprocessing";
 import { LUTCubeLoader, Resizer } from "postprocessing";
 import Model from "../../Heart";
@@ -206,7 +205,7 @@ export const Home = () => {
       " Ignite",
       " Excite",
       "Radiate",
-      " Spark",
+      // " Spark",
     ]);
 
     // useFrame((state, delta) => {
@@ -227,7 +226,7 @@ export const Home = () => {
 
     useEffect(() => {
       const generateRandomNumber = () => {
-        setRandomNumber(Math.floor(Math.random() * 5));
+        setRandomNumber(Math.floor(Math.random() * 4));
       };
 
       // Set the interval to 20 seconds.
@@ -252,10 +251,10 @@ export const Home = () => {
         scale={[1, 1, 1]}
       >
         <Text3D font={fontUrl} scale={0.5} position={[-1.5, 1.4, 0]}>
-          <meshNormalMaterial />
-          <MeshDistortMaterial ref={ref} distort={0.2} speed={1}>
+          {/* <meshNormalMaterial /> */}
+          <MeshDistortMaterial ref={ref} distort={0.2} speed={0.5}>
             <GradientTexture
-              stops={[0.5, 0.8, 1]}
+              stops={[0.8, 0.8, 1]}
               colors={["#ff0013", "#f1faee", "#a8dadc"]}
               size={100}
             />
@@ -386,12 +385,12 @@ export const Home = () => {
                   </group>
                 </Environment>
                 <EffectComposer disableNormalPass>
-                  <Outline
+                  {/* <Outline
                     edgeStrength={2.5}
                     visibleEdgeColor={"black"}
                     width={Resizer.AUTO_SIZE} // render width
                     height={Resizer.AUTO_SIZE} // render height
-                  />
+                  /> */}
                   <Bloom mipmapBlur luminanceThreshold={1} />
                   <LUT lut={texture} />
                   <BrightnessContrast brightness={0} contrast={0.1} />
