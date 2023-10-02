@@ -6,7 +6,9 @@ import AppRoutes from "./routes";
 import Headermain from "../header";
 import AnimatedCursor from "../hooks/AnimatedCursor";
 import "./App.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Spacer, ChakraProvider } from "@chakra-ui/react";
+import ScrollToTop from "react-scroll-to-top";
+import { FaArrowUp } from "react-icons/fa";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -15,7 +17,7 @@ function _ScrollToTop(props) {
   }, [pathname]);
   return props.children;
 }
-const ScrollToTop = withRouter(_ScrollToTop);
+const ScrollToTopp = withRouter(_ScrollToTop);
 
 export default function App() {
   return (
@@ -31,10 +33,32 @@ export default function App() {
             outerScale={5}
           />
         </div>
-        <ScrollToTop>
+        <ScrollToTopp>
+          <ScrollToTop
+            smooth
+            style={{
+              display: "flex",
+              textAlign: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+            component={
+              <>
+                <FaArrowUp
+                  style={{
+                    color: "black",
+                    paddingTop: "5px",
+                    height: "30px",
+                    width: "30px",
+                  }}
+                ></FaArrowUp>
+              </>
+            }
+          />
+
           <Headermain />
           <AppRoutes />
-        </ScrollToTop>
+        </ScrollToTopp>
       </Router>
     </ChakraProvider>
   );
