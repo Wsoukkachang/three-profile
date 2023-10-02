@@ -70,7 +70,7 @@ const Headermain = () => {
             <Center>
               {" "}
               <FaVolumeUp
-                style={{ height: "30px", width: "30px", marginTop: "10px" }}
+                style={{ height: "20px", width: "20px", marginTop: "10px" }}
               />
             </Center>
           </Flex>

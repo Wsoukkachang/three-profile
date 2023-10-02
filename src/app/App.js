@@ -9,6 +9,7 @@ import "./App.css";
 import { Spacer, ChakraProvider } from "@chakra-ui/react";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
+import { Bounce, Zoom } from "react-awesome-reveal";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -41,17 +42,20 @@ export default function App() {
               textAlign: "center",
               alignItems: "center",
               flexDirection: "column",
+              boxShadow: "0 1px 20px 0 rgba(132, 128, 177, 0.90)",
             }}
             component={
               <>
-                <FaArrowUp
-                  style={{
-                    color: "black",
-                    paddingTop: "5px",
-                    height: "30px",
-                    width: "30px",
-                  }}
-                ></FaArrowUp>
+                <Bounce>
+                  <FaArrowUp
+                    style={{
+                      color: "black",
+                      paddingTop: "10px",
+                      height: "30px",
+                      width: "30px",
+                    }}
+                  ></FaArrowUp>
+                </Bounce>
               </>
             }
           />
