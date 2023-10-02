@@ -14,7 +14,7 @@ import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { Stars, Sky, Text3D } from "@react-three/drei";
+import { Stars, Sky, Text3D, Outlines } from "@react-three/drei";
 import { Canvas, extend, useLoader, useFrame } from "@react-three/fiber";
 import {
   Image,
@@ -40,6 +40,9 @@ import {
   useGLTF,
   Loader,
   Center as DCenter,
+  MeshDistortMaterial,
+  GradientTexture,
+  useCursor,
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -47,8 +50,12 @@ import {
   LUT,
   BrightnessContrast,
   HueSaturation,
+  DepthOfField,
+  Noise,
+  Vignette,
+  Outline,
 } from "@react-three/postprocessing";
-import { LUTCubeLoader } from "postprocessing";
+import { LUTCubeLoader, Resizer } from "postprocessing";
 import Model from "../../Heart";
 
 export const Home = () => {
@@ -191,95 +198,73 @@ export const Home = () => {
     );
   }
 
-  // function Track({
-  //   url,
-  //   y = 1000,
-  //   space = 1.8,
-  //   width = 0.01,
-  //   height = 0.05,
-  //   obj = new THREE.Object3D(),
-  //   ...props
-  // }) {
-  //   const ref = useRef();
-  //   // suspend-react is the library that r3f uses internally for useLoader. It caches promises and
-  //   // integrates them with React suspense. You can use it as-is with or without r3f.
-  //   const { gain, context, update, data } = suspend(
-  //     () => createAudio(url),
-  //     [url]
-  //   );
-  //   useEffect(() => {
-  //     // Connect the gain node, which plays the audio
-  //     gain.connect(context.destination);
-  //     // Disconnect it on unmount
-  //     return () => gain.disconnect();
-  //   }, [gain, context]);
+  function ModText(props) {
+    const ref = useRef();
+    const [hovered, hover] = useState(false);
+    const [words, setWords] = useState([
+      "Inspire",
+      " Ignite",
+      " Excite",
+      "Radiate",
+      " Spark",
+    ]);
 
-  //   useFrame((state) => {
-  //     let avg = update();
-  //     // Distribute the instanced planes according to the frequency daza
-  //     for (let i = 0; i < data.length; i++) {
-  //       obj.position.set(
-  //         i * width * space - (data.length * width * space) / 2,
-  //         data[i] / y,
-  //         0
-  //       );
-  //       obj.updateMatrix();
-  //       ref.current.setMatrixAt(i, obj.matrix);
-  //     }
-  //     // Set the hue according to the frequency average
-  //     ref.current.material.color.setHSL(avg / 50, 1, 1);
-  //     ref.current.instanceMatrix.needsUpdate = true;
-  //   });
-  //   return (
-  //     <instancedMesh
-  //       castShadow
-  //       ref={ref}
-  //       args={[null, null, data.length]}
-  //       {...props}
-  //     >
-  //       <planeGeometry args={[width, height]} />
-  //       <meshBasicMaterial toneMapped={false} />
-  //     </instancedMesh>
-  //   );
-  // }
+    // useFrame((state, delta) => {
+    //   ref.current.rotation.z = 0.1 + Math.cos(state.clock.elapsedTime) / 2;
 
-  // async function createAudio(url) {
-  //   // Fetch audio data and create a buffer source
-  //   const res = await fetch(url);
-  //   const buffer = await res.arrayBuffer();
-  //   const context = new (window.AudioContext || window.webkitAudioContext)();
-  //   const source = context.createBufferSource();
-  //   source.buffer = await new Promise((res) =>
-  //     context.decodeAudioData(buffer, res)
-  //   );
-  //   source.loop = true;
-  //   // This is why it doesn't run in Safari 🍏🐛. Start has to be called in an onClick event
-  //   // which makes it too awkward for a little demo since you need to load the async data first
-  //   source.start(0);
-  //   // Create gain node and an analyser
-  //   const gain = context.createGain();
-  //   const analyser = context.createAnalyser();
-  //   analyser.fftSize = 64;
-  //   source.connect(analyser);
-  //   analyser.connect(gain);
-  //   // The data array receive the audio frequencies
-  //   const data = new Uint8Array(analyser.frequencyBinCount);
-  //   return {
-  //     context,
-  //     source,
-  //     gain,
-  //     data,
-  //     // This function gets called every frame per audio source
-  //     update: () => {
-  //       analyser.getByteFrequencyData(data);
-  //       // Calculate a frequency average
-  //       return (data.avg = data.reduce(
-  //         (prev, cur) => prev + cur / data.length,
-  //         0
-  //       ));
-  //     },
-  //   };
-  // }
+    // });
+
+    const [randomNumber, setRandomNumber] = useState(0);
+
+    useCursor(hovered);
+    useFrame(() => {
+      ref.current.distort = THREE.MathUtils.lerp(
+        ref.current.distort,
+        hovered ? 0.4 : 0,
+        hovered ? 0.05 : 0.01
+      );
+    });
+
+    useEffect(() => {
+      const generateRandomNumber = () => {
+        setRandomNumber(Math.floor(Math.random() * 5));
+      };
+
+      // Set the interval to 20 seconds.
+      const interval = 10 * 1000; // milliseconds
+
+      // Set the interval.
+      setInterval(generateRandomNumber, interval);
+
+      // Return a cleanup function that will cancel the interval when the component unmounts.
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
+    return (
+      <group
+        ref={ref}
+        {...props}
+        dispose={null}
+        onPointerOver={() => hover(true)}
+        onPointerOut={() => hover(false)}
+        scale={[1, 1, 1]}
+      >
+        <Text3D font={fontUrl} scale={0.5} position={[-1.5, 1.4, 0]}>
+          <meshNormalMaterial />
+          <MeshDistortMaterial ref={ref} distort={0.2} speed={1}>
+            <GradientTexture
+              stops={[0.5, 0.8, 1]}
+              colors={["#ff0013", "#f1faee", "#a8dadc"]}
+              size={100}
+            />
+          </MeshDistortMaterial>
+          {words[randomNumber]}
+        </Text3D>
+      </group>
+    );
+  }
 
   return (
     <HelmetProvider>
@@ -310,19 +295,18 @@ export const Home = () => {
                   powerPreference: "high-performance",
                 }}
                 dpr={[1, 1.5]}
-                camera={{ position: [0, -0.5, 7], fov: 40 }}
+                camera={{ position: [0, -0.5, 10], fov: 40 }}
               >
                 <color attach="background" args={["#151520"]} />
                 <ambientLight intensity={0.5} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                 <pointLight position={[-10, -10, -10]} />
-                <Model position={[0, -0.2, 0]} scale={1.5} />
 
-                <Text3D font={fontUrl} scale={0.5} position={[-1.5, 1.6, 0]}>
-                  Inspire
-                </Text3D>
+                <Model scale={1.5} />
 
-                <Fire scale={7} position={[0, -0.3, 0]} />
+                <ModText />
+                <Fire scale={7} position={[0, -0.7, 0]} />
+
                 {/* {isPlaying === true ? (
                     <Track
                       castShadow
@@ -353,7 +337,15 @@ export const Home = () => {
                         preset={null} // Preset string (overrides files and path)
                         scene={undefined} // adds the ability to pass a custom THREE.Scene
                       /> */}
-                    <Sky sunPosition={[100, 15, 100]} />
+                    <Sky
+                      turbidity={10}
+                      rayleigh={3}
+                      mieCoefficient={0.001}
+                      azimuth={180}
+                      exposure={0.25}
+                      sunPosition={[100, 0, 100]}
+                      inclination={5}
+                    />
                   </>
                 )}
 
@@ -394,10 +386,31 @@ export const Home = () => {
                   </group>
                 </Environment>
                 <EffectComposer disableNormalPass>
+                  <Outline
+                    edgeStrength={2.5}
+                    visibleEdgeColor={"black"}
+                    width={Resizer.AUTO_SIZE} // render width
+                    height={Resizer.AUTO_SIZE} // render height
+                  />
                   <Bloom mipmapBlur luminanceThreshold={1} />
                   <LUT lut={texture} />
                   <BrightnessContrast brightness={0} contrast={0.1} />
-                  <HueSaturation hue={0} saturation={-0.25} />
+                  <HueSaturation hue={0} saturation={-0.1} />
+                  {/* <DepthOfField
+                    focusDistance={0}
+                    focalLength={5}
+                    bokehScale={10}
+                    height={480}
+                  /> */}
+                  {/* <Bloom
+                    mipmapBlur
+                    luminanceThreshold={1}
+                    luminanceSmoothing={0.9}
+                    height={300}
+                    opacity={3}
+                  /> */}
+                  <Noise opacity={0.05} />
+                  <Vignette eskil={false} offset={0.1} darkness={0.5} />
                 </EffectComposer>
               </Canvas>
             </Suspense>
@@ -420,7 +433,7 @@ export const Home = () => {
                               hasArrow
                               arrowSize={15}
                               placement="bottom"
-                              closeDelay={1000}
+                              closeDelay={2000}
                               shouldWrapChildren={true}
                             >
                               <div className="about_me-image">
@@ -477,7 +490,7 @@ export const Home = () => {
                 )}
 
                 <Spacer p={2} />
-                <h2 className="mb-1x">{introdata.title} 🤝</h2>
+                <h1 className="mb-1x">{introdata.title} 🤝</h1>
                 <Spacer p={2} />
 
                 <div className="about_content">
@@ -532,7 +545,7 @@ export const Home = () => {
 
                 <Spacer p={2} />
 
-                <h1 className="fluidz-64 mb-1x">
+                <h2 className="fluidz-64 mb-1x">
                   <Typewriter
                     options={{
                       strings: [
@@ -549,7 +562,7 @@ export const Home = () => {
                       pauseFor: 2000,
                     }}
                   />
-                </h1>
+                </h2>
 
                 <p className="mb-1x">{introdata.description}</p>
 
@@ -558,7 +571,7 @@ export const Home = () => {
                 <Image
                   className="logo-Nvidia"
                   maxWidth="210px"
-                  // minHeight="70px"
+                  width={"8rem"}
                   // boxSize="150px"
                   // objectFit="cover"
                   zIndex="5"

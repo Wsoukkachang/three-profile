@@ -8,21 +8,33 @@ Source: https://sketchfab.com/3d-models/heart-in-glass-1dacc91d294141658633cce0a
 Title: Heart in glass
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useRef, useEffect, useState } from "react";
+import { useGLTF, Outlines } from "@react-three/drei";
+
+import { useFrame } from "@react-three/fiber";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF("/heart.glb");
+  const ref = useRef();
+  const [hovered, hover] = useState(false);
+
+  useFrame((state, delta) => {
+    // ref.current.rotation.x = ref.current.rotation.y += delta;
+    ref.current.position.y = -0.4 + Math.sin(state.clock.elapsedTime) / 15;
+  });
+
   return (
-    <group {...props} dispose={null}>
+    <group ref={ref} {...props} dispose={null} position={[0, -0.7, 0]}>
       <mesh
         geometry={nodes.defaultMaterial.geometry}
         material={materials.Coeur1}
-      />
+      ></mesh>
       <mesh
         geometry={nodes.defaultMaterial_1.geometry}
         material={materials.Crystal}
-      />
+      >
+        {/* <Outlines thickness={0.05} color={"black"} /> */}
+      </mesh>
     </group>
   );
 }

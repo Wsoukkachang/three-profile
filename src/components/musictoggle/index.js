@@ -54,7 +54,7 @@ const Musictoggle = () => {
         )}
       </div>
       <Suspense fallback={<Spinner />}>
-        {trackIndex === 0 ? (
+        {trackIndex === 1 ? (
           <>
             <Sound
               url={Summon}

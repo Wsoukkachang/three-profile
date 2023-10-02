@@ -7,9 +7,13 @@ section {
     transition: all .5s ease-in;
 }
 
-/* .quote {
-    font-size: ;
+/* .main_img {
+width: 10rem;
 } */
+
+.quote {
+    font-size: 2rem;
+}
 
 .who_am_I {
     font-family: Cinzel;
@@ -245,7 +249,7 @@ section {
   }
   
   .about_me {
-    width: 60%;
+    width: 14rem;
     aspect-ratio: 1/1;
     border-radius: 2rem;
     background: linear-gradient(
@@ -263,14 +267,16 @@ section {
     overflow: hidden;
     transform: rotate(15deg);
     transition: var(--transition);
+    width: 14rem;
   }
   .about_me-image:hover {
     transform: rotate(0);
   }
+
   .about_cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: .5rem;
   }
   
   .about_card {
@@ -320,6 +326,11 @@ section {
       width: 50%;
       margin: 2rem auto 4rem;
     }
+    .about_me-image {
+        width: 100%;
+      }
+
+    
     .about_content p {
       margin: 1rem 0 1.5rem;
     }

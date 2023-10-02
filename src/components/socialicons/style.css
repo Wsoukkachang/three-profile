@@ -1,10 +1,11 @@
 .stick_follow_icon {
     top: 50%;
-    left: 30px;
+    left: 15px;
     width: 20px;
     height: 200px;
     position: fixed;
     margin-top: -100px;
+    margin-bottom: 100px;
 }
 
 .stick_follow_icon ul {
@@ -23,7 +24,7 @@
     top: 70px;
     left: -24px;
     width: 68px;
-    height: 20px;
+    height: 15px;
     color: var(--text-color);
     font-size: 12px;
     font-weight: 600;
@@ -35,7 +36,7 @@
 
 .stick_follow_icon ul li {
     display: block;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     margin-bottom: 10px;
     transition: all .3s;

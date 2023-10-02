@@ -15,9 +15,9 @@ const introdata = {
   animated: {
     zero: "Web3 Ethereum 🔹 Developer",
     first: "I ❤️ love creating! 🖥️",
-    second: "I develop 🤯 insane web apps! 📱",
+    second: "I develop 🤯 insane apps! 📱",
     third: "I crave all things 🎨 artsy and techy! 🤖 ",
-    fourth: "I like to 🛠️ tinker with things! 🧪 ",
+    fourth: "I like to 🛠️ tinker with things!",
     fifth: "Full blown nerd and foody! Always thinking about pi! 🥧 ",
   },
   description: "When we build together, we make magic happen!",
