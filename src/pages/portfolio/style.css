@@ -1,10 +1,11 @@
 .po_items_ho {
-    column-width: 15em;
-    -moz-column-width: 15em;
-    -webkit-column-width: 15em;
+    column-width: 21em;
+    -moz-column-width: 21em;
+    -webkit-column-width: 21em;
     column-gap: 4rem;
     -moz-column-gap: 4rem;
     -webkit-column-gap: 4rem;
+    /* height: 25%; */
 }
 
 .po_item {

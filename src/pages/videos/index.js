@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 import { Box, Grid } from "@chakra-ui/react";
+import { Bounce } from "react-awesome-reveal";
 
 export const Videos = () => {
   return (
@@ -26,65 +27,70 @@ export const Videos = () => {
           responsiveGridColumns={[{ base: "1fr", md: "repeat(2, 1fr)" }]}
           gap={4}
         >
-          <Box
-            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
-            as="iframe"
-            class="youtube-video"
-            src={
-              "https://www.youtube.com/embed/8nQg5_Ez2OY?si=bVZrU4T-PCIh05p1"
-            }
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            borderRadius="10px"
-            boxShadow="lg"
-            margin="auto"
-          />
-
-          <Box
-            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
-            as="iframe"
-            class="youtube-video"
-            src={
-              "https://www.youtube.com/embed/9Rd5nfxKuh8?si=kgn_mfnovAlnONnW"
-            }
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            borderRadius="10px"
-            boxShadow="lg"
-            margin="auto"
-          />
-
-          <Box
-            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
-            as="iframe"
-            class="youtube-video"
-            src={
-              "https://www.youtube.com/embed/aGT5J5f-4WI?si=k2ruVkV_XrBs6Xjw"
-            }
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            borderRadius="10px"
-            boxShadow="lg"
-            margin="auto"
-          />
-
-          <Box
-            style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
-            as="iframe"
-            class="youtube-video"
-            src={
-              "https://www.youtube.com/embed/c51sk7V8Orc?si=W8jNkf2jLpC4RaOl"
-            }
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            borderRadius="10px"
-            boxShadow="lg"
-            margin="auto"
-          />
+          <Bounce>
+            <Box
+              style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
+              as="iframe"
+              class="youtube-video"
+              src={
+                "https://www.youtube.com/embed/8nQg5_Ez2OY?si=bVZrU4T-PCIh05p1"
+              }
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              borderRadius="10px"
+              boxShadow="lg"
+              margin="auto"
+            />
+          </Bounce>
+          <Bounce>
+            <Box
+              style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
+              as="iframe"
+              class="youtube-video"
+              src={
+                "https://www.youtube.com/embed/9Rd5nfxKuh8?si=kgn_mfnovAlnONnW"
+              }
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              borderRadius="10px"
+              boxShadow="lg"
+              margin="auto"
+            />
+          </Bounce>
+          <Bounce>
+            <Box
+              style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
+              as="iframe"
+              class="youtube-video"
+              src={
+                "https://www.youtube.com/embed/aGT5J5f-4WI?si=k2ruVkV_XrBs6Xjw"
+              }
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              borderRadius="10px"
+              boxShadow="lg"
+              margin="auto"
+            />
+          </Bounce>
+          <Bounce>
+            <Box
+              style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
+              as="iframe"
+              class="youtube-video"
+              src={
+                "https://www.youtube.com/embed/c51sk7V8Orc?si=W8jNkf2jLpC4RaOl"
+              }
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              borderRadius="10px"
+              boxShadow="lg"
+              margin="auto"
+            />
+          </Bounce>
         </Grid>
       </Container>
     </HelmetProvider>

@@ -131,17 +131,39 @@ const dataportfolio = [
   },
 
   {
-    img: "https://i.ibb.co/X5mNvQb/kr.png",
-    description: "Kratos: A Work of Power",
-    tech: "React JS / HTML/ CSS/",
-    link: "https://kratoselect.com/",
+    img: "https://i.ibb.co/5LfNMwn/JSON-CREATION.png",
+    description:
+      "NVIDIA OMNIVERSE Kondux Web3 Extension that enables Omniverse to communicate with the Ethereum Blockchain using Universal Scene Description file format. (Private Repo)",
+    tech: "React JS / Moralis/ Solidity / HTML / CSS / Python / MongoDB / Unreal / Unity",
+    link: "https://kondux.info/",
   },
 
+  {
+    img: "https://i.ibb.co/Wp1WShV/thumb-2.jpg",
+    description:
+      "Seen-tence - A visual learning tool to help people understand what they are reading faster. - You can actually hear and see your sentences!",
+    tech: "React JS / Google Api / Unsplash Api / YouTube Api / Firebase",
+    link: "https://seentence2.web.app/",
+  },
+  {
+    img: "https://i.ibb.co/K231rYN/thumb-9.jpg",
+    description:
+      "The Greys - Play as The Greys and save as many humans as you can.",
+    tech: "Javascript / Construct 2",
+    link: "https://www.newgrounds.com/portal/view/640824",
+  },
   {
     img: "https://i.ibb.co/VQvnqnq/rpt.png",
     description: "Real Power Technologies",
     tech: "React JS / HTML/ CSS",
     link: "https://realpowertechnologies.com/",
+  },
+  {
+    img: "https://i.ibb.co/N1Y5jN5/thumb-3.png",
+    description:
+      "Covid-19 tracker app that displays a map, graph, and line chart with the most up-to-date statistics for Covid-19 cases.",
+    tech: "React JS / Material UI/ Disease.sh / Firebase",
+    link: "https://covid19tracker-5585e.web.app/",
   },
 
   {
@@ -152,6 +174,8 @@ const dataportfolio = [
     link: "https://zealous-poincare-b92bd3.netlify.app/",
   },
 
+  //HALF WAY
+
   {
     img: "https://i.ibb.co/RhbDM3p/DNA.png",
     description:
@@ -159,6 +183,7 @@ const dataportfolio = [
     tech: "React JS / Chakra UI / Three.JS / Ethers.js / web3.js / Moralis / Solidity / MongoDB / AWS ",
     link: "https://www.kondux.io/viewport",
   },
+
   {
     img: "https://i.ibb.co/vJXBLXX/su.png",
     description: "Superchange",
@@ -167,36 +192,6 @@ const dataportfolio = [
   },
 
   {
-    img: "https://i.ibb.co/K231rYN/thumb-9.jpg",
-    description:
-      "The Greys - Play as The Greys and save as many humans as you can.",
-    tech: "Javascript / Construct 2",
-    link: "https://www.newgrounds.com/portal/view/640824",
-  },
-
-  {
-    img: "https://i.ibb.co/5LfNMwn/JSON-CREATION.png",
-    description:
-      "NVIDIA OMNIVERSE Kondux Web3 Extension that enables Omniverse to communicate with the Ethereum Blockchain using Universal Scene Description file format. (Private Repo)",
-    tech: "React JS / Moralis/ Solidity / HTML / CSS / Python / MongoDB / Unreal / Unity",
-    link: "https://kondux.info/",
-  },
-
-  {
-    img: "https://i.ibb.co/N1Y5jN5/thumb-3.png",
-    description:
-      "Covid-19 tracker app that displays a map, graph, and line chart with the most up-to-date statistics for Covid-19 cases.",
-    tech: "React JS / Material UI/ Disease.sh / Firebase",
-    link: "https://covid19tracker-5585e.web.app/",
-  },
-  {
-    img: "https://i.ibb.co/58qYqtQ/thumb-4.jpg",
-    description:
-      "InCog - Anonymous Team Feedback App that allows users to give anonymous, constructive feedback to their colleagues.",
-    tech: "React JS / Google Api / Unsplash Api/ YouTube Api/ Firebase",
-    link: "https://speakincog.com/landing",
-  },
-  {
     img: "https://i.ibb.co/DWTB0y5/Staking-Thumb.png",
     description: "Web browser Crypto Staking app. (Private Repo)",
     tech: "React JS / Chakra UI / Ethers.js / web3.js / Moralis / Solidity / MongoDB ",
@@ -204,11 +199,10 @@ const dataportfolio = [
   },
 
   {
-    img: "https://i.ibb.co/Wp1WShV/thumb-2.jpg",
-    description:
-      "Seen-tence - A visual learning tool to help people understand what they are reading faster. - You can actually hear and see your sentences!",
-    tech: "React JS / Google Api / Unsplash Api / YouTube Api / Firebase",
-    link: "https://seentence2.web.app/",
+    img: "https://i.ibb.co/X5mNvQb/kr.png",
+    description: "Kratos: A Work of Power",
+    tech: "React JS / HTML/ CSS/",
+    link: "https://kratoselect.com/",
   },
 
   {
@@ -216,6 +210,14 @@ const dataportfolio = [
     description: "Space Jumper - Simple, yet addicting game.",
     tech: "Javascript / Construct 2",
     link: "https://www.newgrounds.com/portal/view/641062",
+  },
+
+  {
+    img: "https://i.ibb.co/58qYqtQ/thumb-4.jpg",
+    description:
+      "InCog - Anonymous Team Feedback App that allows users to give anonymous, constructive feedback to their colleagues.",
+    tech: "React JS / Google Api / Unsplash Api/ YouTube Api/ Firebase",
+    link: "https://speakincog.com/landing",
   },
 
   {
