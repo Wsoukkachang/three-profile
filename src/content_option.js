@@ -123,19 +123,19 @@ const dataportfolio = [
   },
 
   {
-    img: "https://i.ibb.co/sbZwhdX/thumb-10.jpg",
-    description:
-      "Ancient Shapes - Construct barriers and create weapons to save yourself from alien forces.",
-    tech: "Javascript / Construct 2",
-    link: "https://www.newgrounds.com/portal/view/640245",
-  },
-
-  {
     img: "https://i.ibb.co/5LfNMwn/JSON-CREATION.png",
     description:
       "NVIDIA OMNIVERSE Kondux Web3 Extension that enables Omniverse to communicate with the Ethereum Blockchain using Universal Scene Description file format. (Private Repo)",
     tech: "React JS / Moralis/ Solidity / HTML / CSS / Python / MongoDB / Unreal / Unity",
     link: "https://kondux.info/",
+  },
+
+  {
+    img: "https://i.ibb.co/sbZwhdX/thumb-10.jpg",
+    description:
+      "Ancient Shapes - Construct barriers and create weapons to save yourself from alien forces.",
+    tech: "Javascript / Construct 2",
+    link: "https://www.newgrounds.com/portal/view/640245",
   },
 
   {
