@@ -57,7 +57,7 @@ import {
 import { LUTCubeLoader, Resizer } from "postprocessing";
 import Model from "../../Heart";
 
-export const Home = () => {
+export const Home = ({ ...props }) => {
   const canvasRef = useRef();
   const texture = useLoader(LUTCubeLoader, "/F-6800-STD.cube");
   // const [music, setMusic] = useState(localStorage.getItem("music"));
@@ -68,21 +68,6 @@ export const Home = () => {
   const handleHover = () => {
     setIsOpen(true);
   };
-
-  // useEffect(() => {
-  //   localStorage.setItem("music", music);
-  //   console.log(isPlaying);
-  // }, []);
-
-  // useEffect(() => {
-  //   let musicState = music;
-  //   console.log(musicState);
-  //   if (musicState === true) {
-  //     setIsPlaying(true);
-  //   } else {
-  //     setIsPlaying(false);
-  //   }
-  // }, [document.documentElement.getAttribute("data-music")]);
 
   class FireMaterial extends THREE.ShaderMaterial {
     constructor() {

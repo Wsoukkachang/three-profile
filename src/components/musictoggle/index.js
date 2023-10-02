@@ -4,9 +4,9 @@ import { CgPlayTrackPrev, CgPlayTrackNext } from "react-icons/cg";
 import Sound from "react-sound";
 import Summon from "./Summon.mp3";
 import Still from "./Still.mp3";
-import { Spinner } from "@chakra-ui/react";
+import { Spinner, Flex } from "@chakra-ui/react";
 
-const Musictoggle = () => {
+const Musictoggle = ({ ...props }) => {
   const [music, setmusic] = useState(localStorage.getItem("music"));
   const [isPlaying, setIsPlaying] = useState(false);
   const [trackIndex, setTrackIndex] = useState(0);
@@ -31,28 +31,33 @@ const Musictoggle = () => {
 
   return (
     <>
-      <div className="nav_ac" onClick={musictoggle}>
-        {isPlaying ? (
-          <>
-            <CiPause1 />
-          </>
-        ) : (
-          <>
-            <CiPlay1 />
-          </>
-        )}
-      </div>
-      <div className="nav_ac" onClick={musicTrackToggle}>
-        {trackIndex === 0 ? (
-          <>
-            <CgPlayTrackNext />
-          </>
-        ) : (
-          <>
-            <CgPlayTrackPrev />
-          </>
-        )}
-      </div>
+      <Flex direction={"column"}>
+        <Flex direction={"row"}>
+          <div className="nav_ac" onClick={musictoggle}>
+            {isPlaying ? (
+              <>
+                <CiPause1 />
+              </>
+            ) : (
+              <>
+                <CiPlay1 />
+              </>
+            )}
+          </div>
+          <div className="nav_ac" onClick={musicTrackToggle}>
+            {trackIndex === 0 ? (
+              <>
+                <CgPlayTrackNext />
+              </>
+            ) : (
+              <>
+                <CgPlayTrackPrev />
+              </>
+            )}
+          </div>
+        </Flex>
+      </Flex>
+
       <Suspense fallback={<Spinner />}>
         {trackIndex === 1 ? (
           <>
@@ -61,7 +66,7 @@ const Musictoggle = () => {
               playStatus={
                 isPlaying ? Sound.status.PLAYING : Sound.status.PAUSED
               }
-              volume={25}
+              volume={props.volume}
             />
           </>
         ) : (
@@ -71,7 +76,7 @@ const Musictoggle = () => {
               playStatus={
                 isPlaying ? Sound.status.PLAYING : Sound.status.PAUSED
               }
-              volume={25}
+              volume={props.volume}
             />
           </>
         )}

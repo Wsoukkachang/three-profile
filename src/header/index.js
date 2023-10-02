@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { VscGrabber, VscClose, VscMenu } from "react-icons/vsc";
+import { FaVolumeUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { logotext2, logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
 import Musictoggle from "../components/musictoggle";
+import { Flex, Spacer, Center } from "@chakra-ui/react";
+import { BsArrowsFullscreen } from "react-icons/bs";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
+  const [volume, setVolume] = useState(25);
 
   const handleToggle = () => {
     setActive(!isActive);
     document.body.classList.toggle("ovhidden");
   };
+
+  // const toggleFullscreen = () => {
+  //   setFullScreen(!fullscreen);
+  //   props.fullscreen = fullscreen;
+  //   // console.log(props.fullscreen);
+  // };
 
   return (
     <>
@@ -22,7 +32,7 @@ const Headermain = () => {
             {logotext}
           </Link>
           <div className="d-flex align-items-center">
-            <Musictoggle />
+            <Musictoggle volume={volume} />
             <Themetoggle />
             <button
               className="menu__button nav_ac"
@@ -37,6 +47,38 @@ const Headermain = () => {
             </button>
           </div>
         </div>
+
+        <Flex
+          direction={"row-reverse"}
+          width={"10%"}
+          p={2}
+          style={{ position: "absolute", right: "20px" }}
+        >
+          <Flex direction={"column"}>
+            <input
+              style={{ height: "50%" }}
+              type="range"
+              orient="vertical"
+              min={0}
+              max={100}
+              step={1}
+              value={volume}
+              onChange={(event) => {
+                setVolume(event.target.valueAsNumber);
+              }}
+            />
+            <Center>
+              {" "}
+              <FaVolumeUp
+                style={{ height: "30px", width: "30px", marginTop: "10px" }}
+              />
+            </Center>
+          </Flex>
+          {/* <BsArrowsFullscreen
+            style={{ height: "30px", width: "30px", marginRight: "10px" }}
+            onClick={(fullscreen = !fullscreen)}
+          /> */}
+        </Flex>
 
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
           <div className="bg__menu h-100">

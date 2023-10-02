@@ -36,6 +36,15 @@
     z-index: 1000;
 }
 
+/* 
+input[type="range"]::-moz-range-track {
+    background-color: #053a5f;
+ }
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+  } */
+
 .nav_ac:hover {
     color: var(--text-color-2);
 }
