@@ -409,7 +409,7 @@ export const Home = () => {
                     height={300}
                     opacity={3}
                   /> */}
-                  <Noise opacity={0.05} />
+                  {/* <Noise opacity={0.05} /> */}
                   <Vignette eskil={false} offset={0.1} darkness={0.5} />
                 </EffectComposer>
               </Canvas>
@@ -571,7 +571,7 @@ export const Home = () => {
                 <Image
                   className="logo-Nvidia"
                   maxWidth="210px"
-                  width={"8rem"}
+                  width={"12rem"}
                   // boxSize="150px"
                   // objectFit="cover"
                   zIndex="5"
