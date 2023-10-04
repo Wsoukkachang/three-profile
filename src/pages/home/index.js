@@ -193,11 +193,6 @@ export const Home = ({ ...props }) => {
       // " Spark",
     ]);
 
-    // useFrame((state, delta) => {
-    //   ref.current.rotation.z = 0.1 + Math.cos(state.clock.elapsedTime) / 2;
-
-    // });
-
     const [randomNumber, setRandomNumber] = useState(0);
 
     useCursor(hovered);
@@ -214,7 +209,7 @@ export const Home = ({ ...props }) => {
         setRandomNumber(Math.floor(Math.random() * 4));
       };
 
-      // Set the interval to 20 seconds.
+      // Set the interval to 10 seconds.
       const interval = 10 * 1000; // milliseconds
 
       // Set the interval.
@@ -230,7 +225,7 @@ export const Home = ({ ...props }) => {
       <group
         ref={ref}
         {...props}
-        dispose={null}
+        // dispose={null}
         onPointerOver={() => hover(true)}
         onPointerOut={() => hover(false)}
         scale={[1, 1, 1]}
@@ -333,9 +328,10 @@ export const Home = ({ ...props }) => {
                   </>
                 )}
 
-                <OrbitControls autoRotateSpeed={0.0777} autoRotate />
+                <OrbitControls autoRotateSpeed={0.0333} autoRotate />
                 <Environment
-                  files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/blue_photo_studio_1k.hdr"
+                  files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_country_hall_1k.hdr"
+                  // files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/blue_photo_studio_1k.hdr"
                   resolution={512}
                 >
                   <group rotation={[0, 0, 1]}>
@@ -370,13 +366,7 @@ export const Home = ({ ...props }) => {
                   </group>
                 </Environment>
                 <EffectComposer disableNormalPass>
-                  {/* <Outline
-                    edgeStrength={2.5}
-                    visibleEdgeColor={"black"}
-                    width={Resizer.AUTO_SIZE} // render width
-                    height={Resizer.AUTO_SIZE} // render height
-                  /> */}
-                  <Bloom mipmapBlur luminanceThreshold={1} />
+                  {/* <Bloom mipmapBlur={true} luminanceThreshold={1} /> */}
                   <LUT lut={texture} />
                   <BrightnessContrast brightness={0} contrast={0.1} />
                   <HueSaturation hue={0} saturation={-0.1} />
@@ -386,14 +376,14 @@ export const Home = ({ ...props }) => {
                     bokehScale={10}
                     height={480}
                   /> */}
-                  {/* <Bloom
-                    mipmapBlur
-                    luminanceThreshold={1}
+                  <Bloom
+                    mipmapBlur={true}
+                    luminanceThreshold={1.01}
                     luminanceSmoothing={0.9}
-                    height={300}
-                    opacity={3}
-                  /> */}
-                  {/* <Noise opacity={0.05} /> */}
+                    height={20}
+                    opacity={1.01}
+                  />
+                  {/* <Noise opacity={0.01} /> */}
                   <Vignette eskil={false} offset={0.1} darkness={0.5} />
                 </EffectComposer>
               </Canvas>

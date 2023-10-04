@@ -20,18 +20,20 @@ export default function Model(props) {
 
   useFrame((state, delta) => {
     // ref.current.rotation.x = ref.current.rotation.y += delta;
-    ref.current.position.y = -0.4 + Math.sin(state.clock.elapsedTime) / 15;
+    ref.current.position.y = -0.35 + Math.sin(state.clock.elapsedTime) / 15;
   });
 
   return (
-    <group ref={ref} {...props} dispose={null} position={[0, -0.7, 0]}>
+    <group ref={ref} {...props} dispose={null} position={[0, -0.6, 0]}>
       <mesh
         geometry={nodes.defaultMaterial.geometry}
         material={materials.Coeur1}
+        toneMapped={true}
       ></mesh>
       <mesh
         geometry={nodes.defaultMaterial_1.geometry}
         material={materials.Crystal}
+        toneMapped={false}
       >
         {/* <Outlines thickness={0.05} color={"black"} /> */}
       </mesh>
