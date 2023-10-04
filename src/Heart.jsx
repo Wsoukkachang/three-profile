@@ -28,12 +28,12 @@ export default function Model(props) {
       <mesh
         geometry={nodes.defaultMaterial.geometry}
         material={materials.Coeur1}
-        toneMapped={true}
+        // toneMapped={true}
       ></mesh>
       <mesh
         geometry={nodes.defaultMaterial_1.geometry}
         material={materials.Crystal}
-        toneMapped={false}
+        // toneMapped={false}
       >
         {/* <Outlines thickness={0.05} color={"black"} /> */}
       </mesh>

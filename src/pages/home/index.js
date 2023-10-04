@@ -206,7 +206,11 @@ export const Home = ({ ...props }) => {
 
     useEffect(() => {
       const generateRandomNumber = () => {
-        setRandomNumber(Math.floor(Math.random() * 4));
+        let newRandomNumber = Math.floor(Math.random() * 4);
+        if (randomNumber !== newRandomNumber) {
+          setRandomNumber(Math.floor(Math.random() * 4));
+        } else {
+        }
       };
 
       // Set the interval to 10 seconds.
@@ -330,8 +334,8 @@ export const Home = ({ ...props }) => {
 
                 <OrbitControls autoRotateSpeed={0.0333} autoRotate />
                 <Environment
-                  files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_country_hall_1k.hdr"
-                  // files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/blue_photo_studio_1k.hdr"
+                  // files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_country_hall_1k.hdr"
+                  files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/blue_photo_studio_1k.hdr"
                   resolution={512}
                 >
                   <group rotation={[0, 0, 1]}>
@@ -381,10 +385,10 @@ export const Home = ({ ...props }) => {
                     luminanceThreshold={1.01}
                     luminanceSmoothing={0.9}
                     height={20}
-                    opacity={1.01}
+                    opacity={1.3}
                   />
                   {/* <Noise opacity={0.01} /> */}
-                  <Vignette eskil={false} offset={0.1} darkness={0.5} />
+                  {/* <Vignette eskil={false} offset={0.1} darkness={0.5} /> */}
                 </EffectComposer>
               </Canvas>
             </Suspense>
