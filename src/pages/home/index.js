@@ -556,8 +556,8 @@ export const Home = ({ ...props }) => {
                     }}
                   />
                 </h2>
-
-                <p className="mb-1x">{introdata.description}</p>
+                <Spacer p={1.5} />
+                <p className="mb-1x">-- {introdata.description}</p>
 
                 <Spacer p={1} />
 
@@ -580,11 +580,9 @@ export const Home = ({ ...props }) => {
                         // m={2}
                       />
                     </a>
-
+                    <Spacer p={1.5} />
                     <p className="mb-1x">{introdata.description2}</p>
                   </Flex>
-
-                  {/* <Spacer p={1} /> */}
 
                   <a
                     target="_blank"
