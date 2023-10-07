@@ -10,7 +10,7 @@ const meta = {
 
 const introdata = {
   quote:
-    "If you have a burning 🔥 passion for something, it radiates like the Sun, illuminating 🔦 your path, and inspiring 💭 others around you.",
+    "If you have a burning 🔥 passion for something, it radiates like the Sun ☀️, illuminating 🔦 your path, and inspiring 💭 others around you.",
   title: "I’m William Soukkachang",
   animated: {
     zero: "Web3 Ethereum 🔹 Developer",
@@ -27,7 +27,7 @@ const introdata = {
 };
 
 const dataabout = {
-  title: "About Myself",
+  title: "About Myself 🧑‍🚀",
   quote:
     "I used to think that animation was about moving stuff... Like in order to make it really great, you bounce it, squash it, stretch it, make the eyes go big... But, as time went on, I started loving animating a character who had a kind of burning passion in their heart. Suddenly, animation became for me not so much about moving stuff as it was about moving the audience. - Glen Keane ",
   aboutme:
@@ -75,6 +75,10 @@ const skills = [
     value: 100,
   },
   {
+    name: "Three.js",
+    value: 100,
+  },
+  {
     name: "NodeJS",
     value: 100,
   },
@@ -84,6 +88,22 @@ const skills = [
   },
   {
     name: "Python",
+    value: 100,
+  },
+  {
+    name: "NVIDIA Omniverse",
+    value: 100,
+  },
+  {
+    name: "Blockchain / Web3",
+    value: 100,
+  },
+  {
+    name: "UI / UX",
+    value: 100,
+  },
+  {
+    name: "XR / AR",
     value: 100,
   },
 ];

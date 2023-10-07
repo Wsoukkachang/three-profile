@@ -14,7 +14,7 @@ import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { Stars, Sky, Text3D, Outlines } from "@react-three/drei";
+import { Stars, Sky, Text3D, Outlines, Grid } from "@react-three/drei";
 import { Canvas, extend, useLoader, useFrame } from "@react-three/fiber";
 import {
   Image,
@@ -24,12 +24,15 @@ import {
   Tooltip,
   useColorMode,
   Svg,
+  Flex,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import * as THREE from "three";
 import glsl from "babel-plugin-glsl/macro";
 import NvidiaWhite from "./LogoWhite.svg";
 import NvidiaBlack from "./LogoBlack.svg";
 import Nvidia from "./nvidia.png";
+import Threejs from "./threejs.png";
 import fontUrl from "./Tomatoes_Regular.json";
 
 import {
@@ -497,9 +500,15 @@ export const Home = ({ ...props }) => {
                       </article>
                     </Link>
 
-                    <div className="intro_btn-action pb-5">
+                    <div className="intro_btn-action pb-5 m-2">
                       <Link to="/portfolio" className="text_2">
-                        <div id="button_p" className="ac_btn btn ">
+                        <div
+                          id="button_p"
+                          className="ac_btn btn "
+                          style={{
+                            width: "100%",
+                          }}
+                        >
                           My Portfolio
                           <div className="ring one"></div>
                           <div className="ring two"></div>
@@ -508,7 +517,13 @@ export const Home = ({ ...props }) => {
                       </Link>
                       <Spacer p={4} />
                       <Link to="/contact">
-                        <div id="button_h" className="ac_btn btn">
+                        <div
+                          id="button_h"
+                          className="ac_btn btn"
+                          style={{
+                            width: "100%",
+                          }}
+                        >
                           Contact
                           <div className="ring one"></div>
                           <div className="ring two"></div>
@@ -546,20 +561,49 @@ export const Home = ({ ...props }) => {
 
                 <Spacer p={1} />
 
-                <Image
-                  className="logo-Nvidia"
-                  maxWidth="210px"
-                  width={"12rem"}
-                  // boxSize="150px"
-                  // objectFit="cover"
-                  zIndex="5"
-                  src={`${Nvidia}`}
-                  // m={2}
-                />
+                <SimpleGrid minChildWidth="200px" gap={4}>
+                  <Flex direction={"column"}>
+                    <a
+                      target="_blank"
+                      href={
+                        "https://finance.yahoo.com/news/kondux-web3-design-lab-joins-180000071.html"
+                      }
+                    >
+                      <Image
+                        className="logo-Nvidia"
+                        maxWidth="210px"
+                        width={"14rem"}
+                        // boxSize="150px"
+                        // objectFit="cover"
+                        zIndex="5"
+                        src={`${Nvidia}`}
+                        // m={2}
+                      />
+                    </a>
+
+                    <p className="mb-1x">{introdata.description2}</p>
+                  </Flex>
+
+                  {/* <Spacer p={1} /> */}
+
+                  <a
+                    target="_blank"
+                    href={"https://threejs-journey.com/certificate/view/32616"}
+                  >
+                    <Image
+                      className="logo-Nvidia"
+                      maxWidth="210px"
+                      width={"12rem"}
+                      // boxSize="150px"
+                      // objectFit="cover"
+                      zIndex="5"
+                      src={`${Threejs}`}
+                      // m={2}
+                    />
+                  </a>
+                </SimpleGrid>
 
                 <Spacer p={3} />
-
-                <p className="mb-1x">{introdata.description2}</p>
               </div>
             </div>
           </div>
