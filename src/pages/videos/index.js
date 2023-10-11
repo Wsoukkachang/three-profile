@@ -9,7 +9,7 @@ import { Bounce } from "react-awesome-reveal";
 export const Videos = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header" style={{ paddingBottom: "100px" }}>
         <Helmet>
           <meta charSet="utf-8" />
           <title> Videos | {meta.title} </title>{" "}
@@ -27,6 +27,10 @@ export const Videos = () => {
           responsiveGridColumns={[{ base: "1fr", md: "repeat(2, 1fr)" }]}
           gap={4}
         >
+          <h1 className="display-4 mb-4">
+            {" "}
+            KNFT NVIDIA Omniverse PhysX Promos
+          </h1>{" "}
           <Bounce>
             <Box
               style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}
@@ -75,6 +79,9 @@ export const Videos = () => {
               margin="auto"
             />
           </Bounce>
+          <h1 className="display-4 mb-4">
+            Kondux NVIDIA Omniverse Extension Demo
+          </h1>{" "}
           <Bounce>
             <Box
               style={{ aspectRatio: 16 / 9, minWidth: "45vw" }}

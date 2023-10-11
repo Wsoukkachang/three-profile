@@ -281,7 +281,12 @@ export const Home = ({ ...props }) => {
                   powerPreference: "high-performance",
                 }}
                 dpr={[1, 1.5]}
-                camera={{ position: [0, -0.5, 10], fov: 40 }}
+                camera={{
+                  position: [0, -0.5, 10],
+                  fov: 40,
+                  near: 0.01,
+                  far: 500,
+                }}
               >
                 <color attach="background" args={["#151520"]} />
                 <ambientLight intensity={0.5} />
@@ -335,7 +340,11 @@ export const Home = ({ ...props }) => {
                   </>
                 )}
 
-                <OrbitControls autoRotateSpeed={0.0333} autoRotate />
+                <OrbitControls
+                  autoRotateSpeed={0.0333}
+                  autoRotate
+                  maxDistance={30}
+                />
                 <Environment
                   // files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_country_hall_1k.hdr"
                   files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/blue_photo_studio_1k.hdr"
