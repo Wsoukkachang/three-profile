@@ -24,6 +24,11 @@ const Headermain = () => {
   //   // console.log(props.fullscreen);
   // };
 
+  console.log(
+    "%c Created by William Soukkachang: https://www.linkedin.com/in/wsoukkachang/",
+    "border:2px solid gray; padding:5px; font-family:monospace; font-size:11px;"
+  );
+
   return (
     <>
       <header className="fixed-top site__header">

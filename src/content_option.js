@@ -35,6 +35,14 @@ const dataabout = {
 };
 const worktimeline = [
   {
+    jobtitle: "Web3 Blockchain Developer, Full Stack Developer",
+    duties: "Front End, Back End",
+    detail:
+      "*",
+    where: "Let's MOD",
+    date: "2023-Present",
+  },
+  {
     jobtitle: "Lead Full Stack Developer, Software Engineer",
     duties: "Front End, Back End",
     detail:
